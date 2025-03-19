@@ -23,9 +23,9 @@ jobs:
 
     - name: Download Kaggle notebook
       env:
-        KAGGLE_USERNAME: ${{ secrets.abhay120204123 }}
-        KAGGLE_KEY: ${{ secrets.001f0bae8a1e63e3b6ea46a6d1ae1054 }}
-      run: kaggle kernels pull <abhay120204123>/<image_classification> -p .
+        KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+        KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+      run: kaggle kernels pull <KAGGLE_USERNAME>/<NOTEBOOK_NAME> -p .
 
     - name: Commit and push changes
       run: |
